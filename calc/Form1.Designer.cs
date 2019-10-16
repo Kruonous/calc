@@ -73,9 +73,10 @@
             this.txtbox2.Multiline = true;
             this.txtbox2.Name = "txtbox2";
             this.txtbox2.ReadOnly = true;
-            this.txtbox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtbox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtbox2.Size = new System.Drawing.Size(318, 53);
             this.txtbox2.TabIndex = 1;
+            this.txtbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btncle
             // 

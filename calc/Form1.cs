@@ -203,6 +203,10 @@ namespace calc
             {
                 return;
             }
+            else if (txtbox2.Text.Contains(","))
+            {
+                return;
+            }
             else if (txtbox2.Text.Length <= 7)
             {
                 txtbox2.Text += btnvirg.Text;
