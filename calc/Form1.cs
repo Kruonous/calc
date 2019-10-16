@@ -40,6 +40,11 @@ namespace calc
                 txtbox2.Text = btn1.Text;
                 operacao = false;
             }
+            else if (txtbox2.Text == "0")
+            {
+                txtbox2.Clear();
+                txtbox2.Text += btn1.Text;
+            }
             else if(txtbox2.Text.Length <= 7)
             {
                 txtbox2.Text += btn1.Text;
@@ -51,6 +56,11 @@ namespace calc
             {
                 txtbox2.Text = btn2.Text;
                 operacao = false;
+            }
+            else if (txtbox2.Text == "0")
+            {
+                txtbox2.Clear();
+                txtbox2.Text += btn2.Text;
             }
             else if (txtbox2.Text.Length <= 7)
             {
@@ -64,6 +74,11 @@ namespace calc
                 txtbox2.Text = btn3.Text;
                 operacao = false;
             }
+            else if (txtbox2.Text == "0")
+            {
+                txtbox2.Clear();
+                txtbox2.Text += btn3.Text;
+            }
             else if (txtbox2.Text.Length <= 7)
             {
                 txtbox2.Text += btn3.Text;
@@ -75,6 +90,11 @@ namespace calc
             {
                 txtbox2.Text = btn4.Text;
                 operacao = false;
+            }
+            else if (txtbox2.Text == "0")
+            {
+                txtbox2.Clear();
+                txtbox2.Text += btn4.Text;
             }
             else if (txtbox2.Text.Length <= 7)
             {
@@ -88,6 +108,11 @@ namespace calc
                 txtbox2.Text = btn5.Text;
                 operacao = false;
             }
+            else if (txtbox2.Text == "0")
+            {
+                txtbox2.Clear();
+                txtbox2.Text += btn5.Text;
+            }
             else if (txtbox2.Text.Length <= 7)
             {
                 txtbox2.Text += btn5.Text;
@@ -99,6 +124,11 @@ namespace calc
             {
                 txtbox2.Text = btn6.Text;
                 operacao = false;
+            }
+            else if (txtbox2.Text == "0")
+            {
+                txtbox2.Clear();
+                txtbox2.Text += btn6.Text;
             }
             else if (txtbox2.Text.Length <= 7)
             {
@@ -112,6 +142,11 @@ namespace calc
                 txtbox2.Text = btn7.Text;
                 operacao = false;
             }
+            else if (txtbox2.Text == "0")
+            {
+                txtbox2.Clear();
+                txtbox2.Text += btn7.Text;
+            }
             else if (txtbox2.Text.Length <= 7)
             {
                 txtbox2.Text += btn7.Text;
@@ -124,6 +159,11 @@ namespace calc
                 txtbox2.Text = btn8.Text;
                 operacao = false;
             }
+            else if (txtbox2.Text == "0")
+            {
+                txtbox2.Clear();
+                txtbox2.Text += btn8.Text;
+            }
             else if (txtbox2.Text.Length <= 7)
             {
                 txtbox2.Text += btn8.Text;
@@ -135,6 +175,11 @@ namespace calc
             {
                 txtbox2.Text = btn9.Text;
                 operacao = false;
+            }
+            else if(txtbox2.Text == "0")
+            {
+                txtbox2.Clear();
+                txtbox2.Text += btn9.Text;
             }
             else if (txtbox2.Text.Length <= 7)
             {
@@ -152,11 +197,26 @@ namespace calc
                 txtbox2.Text += btn0.Text;
             }
         }
+        private void Btnvirg_Click(object sender, EventArgs e)
+        {
+            if(txtbox2.Text == "")
+            {
+                return;
+            }
+            else if (txtbox2.Text.Length <= 7)
+            {
+                txtbox2.Text += btnvirg.Text;
+            }
+        }
         private void Btnadi_Click(object sender, EventArgs e)
         {
             if(calcular == "*" || calcular == "-" || calcular == "/")
             {
                 calcular = "+";
+            }
+            else if (txtbox2.Text == "")
+            {
+                return;
             }
             else
             {
@@ -173,6 +233,10 @@ namespace calc
             {
                 calcular = "-";
             }
+            else if(txtbox2.Text == "")
+            {
+                return;
+            }
             else
             {
                 num1 += double.Parse(txtbox2.Text);
@@ -188,6 +252,10 @@ namespace calc
             {
                 calcular = "*";
             }
+            else if (txtbox2.Text == "")
+            {
+                return;
+            }
             else
             {
                 num1 += double.Parse(txtbox2.Text);
@@ -202,6 +270,10 @@ namespace calc
             if (calcular == "-" || calcular == "+" || calcular == "*")
             {
                 calcular = "/";
+            }
+            else if (txtbox2.Text == "")
+            {
+                return;
             }
             else
             {

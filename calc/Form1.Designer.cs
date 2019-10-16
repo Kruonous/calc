@@ -262,6 +262,7 @@
             this.btnvirg.TabIndex = 20;
             this.btnvirg.Text = ",";
             this.btnvirg.UseVisualStyleBackColor = true;
+            this.btnvirg.Click += new System.EventHandler(this.Btnvirg_Click);
             // 
             // btnig
             // 
