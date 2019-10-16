@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -300,7 +301,7 @@ namespace calc
                         resultado = num1 + num2;
                         txtbox1.Clear();
                         txtbox3.Clear();
-                        txtbox2.Text = resultado.ToString();
+                        txtbox2.Text = resultado.ToString("N2");
                         break;
                     }
                 case "-":
@@ -308,7 +309,7 @@ namespace calc
                         resultado = num1 - num2;
                         txtbox1.Clear();
                         txtbox3.Clear();
-                        txtbox2.Text = resultado.ToString();
+                        txtbox2.Text = resultado.ToString("N2");
                         break;
                     }
                 case "*":
@@ -316,7 +317,7 @@ namespace calc
                         resultado = num1 * num2;
                         txtbox1.Clear();
                         txtbox3.Clear();
-                        txtbox2.Text = resultado.ToString();
+                        txtbox2.Text = resultado.ToString("N2");
                         break;
                     }
                 case "/":
@@ -326,7 +327,7 @@ namespace calc
                             resultado = num1 / num2;
                             txtbox1.Clear();
                             txtbox3.Clear();
-                            txtbox2.Text = resultado.ToString();
+                            txtbox2.Text = resultado.ToString("N2");
                             break;
                         }
                         else
