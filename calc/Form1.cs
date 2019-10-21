@@ -23,7 +23,6 @@ namespace calc
         }
         private void Btncle_Click(object sender, EventArgs e)
         {
-            txtbox2.Clear();
             txtbox2.Text = btn0.Text;
         }
         private void Btnbac_Click(object sender, EventArgs e)
@@ -291,9 +290,22 @@ namespace calc
         }
         private void Btnig_Click(object sender, EventArgs e)
         {
-            num1 = Convert.ToDouble(txtbox1.Text);
-            num2 = Convert.ToDouble(txtbox2.Text);
-            operacao = true;
+            if (txtbox1.Text == "" && txtbox2.Text == "")
+            {
+                return;
+            }
+            else if (txtbox1.Text == "")
+            {
+                num1 = resultado;
+                num2 = Convert.ToDouble(txtbox2.Text);
+                operacao = true;
+            }
+            else
+            {
+                num1 = Convert.ToDouble(txtbox1.Text);
+                num2 = Convert.ToDouble(txtbox2.Text);
+                operacao = true;
+            }
             switch (calcular)
             {
                 case "+":
